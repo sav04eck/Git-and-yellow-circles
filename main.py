@@ -25,10 +25,10 @@ class MainWindow(QtWidgets.QMainWindow):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.RenderHint.Antialiasing)
         for circle in self.circles:
-            x, y, diameter = circle
+            x, y, d = circle
             painter.setBrush(QColor(255, 255, 0))  # Жёлтый цвет
             painter.setPen(Qt.PenStyle.NoPen)
-            painter.drawEllipse(x, y, diameter, diameter)
+            painter.drawEllipse(x, y, d, d)
 
 
 if __name__ == "__main__":
